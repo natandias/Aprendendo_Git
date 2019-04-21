@@ -1,0 +1,61 @@
+#SETUP
+git config --global user.name "seunome"
+git config --global user.email "seuemail"
+git config --global core.editor "editortxt"
+
+#Listar Configs
+//mostra usuario (substitua user.name pela config que quiser)
+git config user.name
+//lista tudo
+git config --list
+
+#Inicializar repositório (pasta)
+/*é possível criar a pasta na GUI ou por meio do terminal
+criada a pasta, abra o menu de contexto e clique em Git Bash here*/
+
+/*é possível criar pelo terminal
+use o comando cd para ir a pasta
+mkdir para criar a pasta*/
+
+#Iniciar repositório
+Após criar a pasta, dê o comando: git init
+
+#Listar conteúdo da pasta
+ls: lista somente arquivos
+ls -a: lista arquivos e pastas
+ls -l: lista somente arquivos com informações sobre eles
+ls -la: combina os outros dois (arquivos, pastas e infos)
+
+#Usando editor externo
+/* editor arquivo 
+ex: code Readme.md
+Abre o arquivo no VsCode */
+
+#Usando editor interno (terminal)
+vim Readme.md
+i: habilita edição
+pressione ESC
+:wq 
+dê ENTER
+
+Estados do GIT (para ver: git status)
+//arquivo foi criado:
+Untracked: arquivo foi adicionado, mas ainda não foi 'registrado' no GIT
+
+//após dar git add arquivo
+Staged: versão do arquivo é criada
+
+//após dar commit
+Unmodified: versão é salva e passa a ser tratada como a original
+
+//após editar 
+Modified: a nova versão foi modificada
+
+//dê git add arquivo
+Staged: é criada nova versão
+
+//commit
+Nova versão é salva
+
+
+
