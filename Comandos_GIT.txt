@@ -42,7 +42,7 @@ Estados do GIT (para ver: git status)
 //arquivo foi criado:
 Untracked: arquivo foi adicionado, mas ainda não foi 'registrado' no GIT
 
-//após dar git add arquivo
+//após dar git add arquivo (para todos arquivos da pasta: git add -all)
 Staged: versão do arquivo é criada
 
 //após dar commit
@@ -56,6 +56,33 @@ Staged: é criada nova versão
 
 //commit (git commit -m "mensagem de log")
 Nova versão é salva
+
+//git log
+mostra relatório dos commits feitos no repositório
+
+//git log --decorate
+log com informações adicionais
+
+//git log --author="nome"
+procura commits feitas por determinada pessoa
+
+//git shortlog
+log resumido somente com autores e commits
+
+//git shortlog -sn
+mostra as pessoas que contribuiram no projeto
+
+//git shortlog -graph
+log gráfico
+
+//git show hash_do_commit
+mostra dados sobre determinado commit
+
+
+
+
+
+
 
 
 
