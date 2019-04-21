@@ -54,7 +54,7 @@ Modified: a nova versão foi modificada
 //dê git add arquivo
 Staged: é criada nova versão
 
-//commit
+//commit (git commit -m "mensagem de log")
 Nova versão é salva
 
 
