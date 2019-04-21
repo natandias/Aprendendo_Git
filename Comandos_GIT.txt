@@ -78,6 +78,41 @@ log gráfico
 //git show hash_do_commit
 mostra dados sobre determinado commit
 
+//git diff
+mostra os arquivos modificados e quais as modificações
+
+//git diff --name-only
+mostra somente o nome dos arquivos que foram modificados
+
+//git commit -am "log msg"
+Adiciona e já comita os arquivos modificados
+
+//dir
+mostra os diretórios da local em que o terminal está aberto
+
+//git checkout 
+cancela modifições que ainda não foram para staged (não foi feito add ainda)
+
+//git reset Head arquivo 
+quando o arquivo já está no estado staged mas ainda não foi feito commit 
+
+//git reset --
+obs: usa-se hash do commit anterior ao que você quer cancelar, pois o último commit atua como ponteiro
+
+//git reset --soft hash_do_commit.
+volta do commit pro staged
+
+//git reset --mixed hash_do_commit
+volta do commit pro modified (antes do staged)
+
+//git reset --hard hash_do_commit
+desaparece com o commit do mapa
+
+
+
+
+
+
 
 
 
