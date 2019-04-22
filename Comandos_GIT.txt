@@ -108,8 +108,43 @@ volta do commit pro modified (antes do staged)
 //git reset --hard hash_do_commit
 desaparece com o commit do mapa
 
+//linkando repositório local ao remoto
+git remote add origin link_do_repositorio
+git push -u origin master
 
+//enviar atualizações do projeto pro Github
+git push
 
+//atualizar o projeto local com o do Github
+git pull
+
+//clonando repositório do Github
+git clone link_do_repositorio  diretorio_onde_sera_armazenado
+
+//quando você clona o repositório não é possível fazer push se ele não for o seu 
+
+//fork
+cria uma cópia exata do projeto original
+
+//criar branch
+git checkout -b nome_do_branch 
+
+//listar branch's existentes
+git branch
+
+//remover commits mais antigos sem excluir os mais recentes
+git rebase -i HEAD~N
+
+//movimentar entre branches
+git checkout nome_do_branch
+
+//deletar branch 
+git branch -d nome_do_branch
+
+//não é possível deletar a branch em uso, é necessário ir para outra branch primeiro
+
+//Para unir os branches
+//merge - é uma operação não destrutiva e cria um commit extra para juntar os branches, cria um árvore com várias bifurcações
 
 
 
