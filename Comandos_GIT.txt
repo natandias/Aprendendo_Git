@@ -1,4 +1,4 @@
-#SETUP
+git #SETUP
 git config --global user.name "seunome"
 git config --global user.email "seuemail"
 git config --global core.editor "editortxt"
@@ -93,6 +93,9 @@ mostra os diretórios da local em que o terminal está aberto
 //git checkout 
 cancela modifições que ainda não foram para staged (não foi feito add ainda)
 
+//git rm -r --cached arquivo
+remove arquivos que ainda não foram pro stage
+
 //git reset Head arquivo 
 quando o arquivo já está no estado staged mas ainda não foi feito commit 
 
@@ -126,6 +129,8 @@ git clone link_do_repositorio  diretorio_onde_sera_armazenado
 //fork
 cria uma cópia exata do projeto original
 
+//não é possível deletar a branch em uso, é necessário ir para outra branch primeiro
+
 //criar branch
 git checkout -b nome_do_branch 
 
@@ -141,15 +146,52 @@ git checkout nome_do_branch
 //deletar branch 
 git branch -d nome_do_branch
 
-//não é possível deletar a branch em uso, é necessário ir para outra branch primeiro
 
 //Para unir os branches
-//merge - é uma operação não destrutiva e cria um commit extra para juntar os branches, cria um árvore com várias bifurcações
+//merge - é uma operação não destrutiva e cria um commit extra para juntar os branches, cria um árvore com várias bifurcações, bagunça o histórico
+git merge nome_do_branch
 
+//rebase - coloca uma branch no ínicio da fila, deixa de forma linear, evita commit extra e mantém o histórico linear, mas perde ordem cronológica
+git rebase nome_do_branch
+//git pull --rebase (evita mudanças de histórico)
 
+//uso comum:
+Quando for atualizar sua branch com master, use rebase.
 
+Quando for introduzir a sua branch no master, use merge.
+chame o rebase ou merge na branch que deseja que eles seja, adicionados (geralmente a master).
 
+//git ignore - lista de arquivos que não devem ser upados para o repositório
+vim .gitignore
+insira os arquivos que devem ser ignorados ou insira as extensões que devem ser ignoradas. ex: senhas.txt ou *.doc
 
+//git stash - guarda modificação enquanto você edita
+git stash - pra criar o arquivo
+git stash creat 'nome_do_stage' - cria com mensagem
+git stash apply - retorna o arquivo guardado
+git stash list - mostra o que está guardado
+git stash clear - limpa
+
+//alias - atalhos para comandos
+git config --global alias.novo_comando comando_a_substituir
+
+//tags - serve para indicar novas versões (releases)
+git tag -a nome_da_tag -m "Mensagem"
+git push origin master --tags
+
+//apagar tags
+git tag  -d nome_Da_tag
+
+//git Revert - cria um novo commit apagando as ultimas alterações mas mantém o commit anterior, diferente do reset que apaga o commit 
+git revert hash_do_commit
+
+//recuperar arquivo deletado
+git status
+git checkout -- nome_do_arquivo_deletado
+
+//apagar tags e branches remotos
+git push origin :nome_Da_tag
+git push origin :nome_do_Branch
 
 
 
