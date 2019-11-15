@@ -12,8 +12,8 @@ Rockseat, 2017
 2. **Crie uma conta no Github.**
 
 3. **Abra o Git Bash e gere uma chave SSH, que será usada para realizar as operações entre o seu dispositivo local e o Github:**
-   Obs: email deve ser o mesmo que foi cadastrado no Github.
-   `ssh-keygen -t rsa -b 4096 -C "seuEmail@exemplo.com"`
+   Obs: email deve ser o mesmo que foi cadastrado no Github.  
+   `ssh-keygen -t rsa -b 4096 -C "seuEmail@exemplo.com"`  
    Dê Enter em todas as etapas. Recomendo que não coloque senha para não ter que digita-lá toda vez que precisar realizar uma operação.
 
 4. **Inicie o agente SSH:**
@@ -22,10 +22,10 @@ Rockseat, 2017
 5. **Adicione a chave SSH gerada ao agente SSH:**
    `ssh-add ~/.ssh/id_rsa`
 
-6. **Copie a chave SSH gerada para a área de transferência:**
-   `clip < ~/.ssh/id_rsa.pub`
-   Obs: se o comando clip não funcionar, tente usar o cat e copiar a chave que aparece no terminal:
-   `cat < ~/.ssh/id_rsa.pub`
+6. **Copie a chave SSH gerada para a área de transferência:**  
+   `clip < ~/.ssh/id_rsa.pub`  
+   Obs: se o comando clip não funcionar, tente usar o cat e copiar a chave que aparece no terminal:  
+   `cat < ~/.ssh/id_rsa.pub`  
    A chave deve estar no formato "ssh-rsa CaratecteresAleatorios seuEmail".
 
 7. **Adicione a chave SSH ao Github:**
@@ -40,15 +40,17 @@ _Esse passos podem ser diferentes de acordo com o Sistema Operacional usado, cli
 
 Na página inicial do [Github](https://github.com):
 Clique no ‘+’ no canto superior direito, vá em ‘new repository’:
-Escolha um nome para o ‘repository name’ e clique em criar. Prefira criar um repósitorio vazio para evitar erros na hora de subir o seu repositório local.
+Escolha um nome para o ‘repository name’ e clique em criar. Prefira criar um repósitorio vazio para evitar erros na hora de subir o seu repositório local.  
+Agora, você precisa criar um repositório local que será subido para o Github.
 
 ## Criando repositórios locais
 
 ### Configurando o GIT
 
-É necessário configurar o seu nome de usuário e email para utilizar o GIT, para isso rode os seguintes comandos no Git Bash:
+**Todos os comandos abaixo devem ser rodados no Git Bash ou no terminal se estiver usando Mac ou Linux.**  
 
-**Os dados devem ser os mesmos dos usados na criação da conta do Github, e devem ser digitados entre as aspas:**
+É necessário configurar o seu nome de usuário e email para utilizar o GIT, para isso rode os seguintes comandos no Git Bash:  
+**Os dados devem ser os mesmos dos usados na criação da conta do Github, e devem ser digitados entre aspas:**  
 git config --global user.name "_seunome_"  
 git config --global user.email "_seuemail_"  
 git config --global core.editor "_seuEditordeTexto_"  
@@ -60,8 +62,6 @@ Mostra config específica (substitua _user.name_ pela config que quiser)
 
 Listar todas as configs  
 `git config --list`  
-
-**Todos os comandos abaixo devem ser rodados no Git Bash ou no terminal se estiver usando Mac ou Linux.**  
 
 ### Iniciando o repositório local
 
@@ -88,7 +88,7 @@ Se quiser adicionar um arquivo especifíco use: `git add nomeDoArquivo`
 `git commit -m “mensagem”`  
 
 Esse comando criará uma versão do seu projeto, em mensagem, você deve inserir uma curta descrição do que foi alterado nessa versão em relação a anterior.  
-Ex: você criou um arquivo index.js na pasta, então você irá rodar o comando:
+Ex: você criou um arquivo index.js na pasta, então você pode rodar o seguinte comando:
 `git commit -m “Add index.js”`  
 
 Cada commit possui um hash, que funciona como seu número de identificação, isso serve para manter a integridade do sistema, e poder realizar operações sobre um commit posteriormente.  
@@ -123,7 +123,7 @@ pressione `ESC`
 digite `:wq`  
 dê `ENTER`  
 
-### Estados do GIT
+### Estados do Git
 
 Para visualizar:  
 `git status`  
@@ -131,22 +131,22 @@ Para visualizar:
 O Git implementa um sistema em que os arquivos do repósitorio sempre estão em um dos seguintes estados possíveis:  
 
 **Arquivo foi criado:**  
-_Untracked:_ arquivo foi adicionado, mas ainda não foi 'registrado' no GIT.  
+_Untracked:_ arquivo foi adicionado, mas ainda não foi 'registrado' no Git.  
 
 **Após dar git add arquivo**  
-_Staged:_ versão do arquivo é criada  
+_Staged:_ arquivo começa a ser monitorado.
 
 **Após dar commit**  
-_Unmodified:_ versão é salva e passa a ser tratada como a versão atual  
+_Unmodified:_ versão do arquivo é salva e passa a ser tratada como a versão atual  
 
 **Após editar**  
 _Modified:_ a versão criada com o commit anterior foi modificada  
 
 **Dê git add arquivo**  
-_Staged:_ é criada nova versão  
+_Staged:_ é criada nova versão do arquivo
 
 **Dê commit (git commit -m "mensagem de log")**  
-Nova versão é salva.  
+Nova versão é consolidada e salva.  
 
 ### Outros comandos úteis
 
