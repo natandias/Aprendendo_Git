@@ -52,7 +52,8 @@ Agora, você precisa criar um repositório local que será subido para o Github.
 É necessário configurar o seu nome de usuário e email para utilizar o GIT, para isso rode os seguintes comandos no Git Bash:  
 **Os dados devem ser os mesmos dos usados na criação da conta do Github, e devem ser digitados entre aspas:**  
 git config --global user.name "_seunome_"  
-git config --global user.email "_seuemail_"  
+git config --global user.email "_seuemail_"    
+**Se quiser, pode definir um editor de texto de sua preferência:**  
 git config --global core.editor "_seuEditordeTexto_"  
 
 ### Listando configurações do GIT
